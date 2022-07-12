@@ -1,0 +1,13 @@
+
+    <mat-form-field [appearance]="appearance">
+        <!-- #docregion toggle -->
+        <mat-label>{{label}}</mat-label>
+        <input matInput="matInput" (dateChange)="sendDateValue()" [matDatepicker]="picker" placeholder="{{ placeholdername }}" class="{{ className }}" [formControl]="date">
+            <mat-datepicker-toggle matSuffix="matSuffix" [for]="picker">
+                <mat-icon matDatepickerToggleIcon="matDatepickerToggleIcon">keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker panelClass="datepicker"></mat-datepicker>
+            <!-- #enddocregion toggle -->
+   </mat-form-field>
+  
+

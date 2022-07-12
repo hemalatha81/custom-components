@@ -1,0 +1,21 @@
+mat-form-field{
+    margin-left: 120px;
+}
+ ::ng-deep .datepickerOne{
+   
+    width: 170px;
+    height: 100%;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 14px;
+    background-color: #f096b4;
+  }
+  
+  ::ng-deep .datepicker {
+    background:rgb(7, 145, 190);
+  }
+  
+  ::ng-deep .datepicker .mat-calendar-body-selected{
+    border-color:darkblue;
+    background-color: yellow;
+    color:rgb(12, 9, 9);
+  }

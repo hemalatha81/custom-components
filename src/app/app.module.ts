@@ -5,16 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextComponent } from './common/input-text/input-text.component';
+import { MaterialModule } from './material/material.module';
+import {MatNativeDateModule} from '@angular/material/core';
+import { DatepickerComponent } from './common/datepicker/datepicker.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputTextComponent
+    InputTextComponent,
+    DatepickerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    MaterialModule,
+    BrowserAnimationsModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
