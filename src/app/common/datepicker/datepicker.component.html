@@ -1,8 +1,8 @@
 
-    <mat-form-field [appearance]="appearance">
+    <mat-form-field [appearance]="appearance" class="{{ className }}">
         <!-- #docregion toggle -->
         <mat-label>{{label}}</mat-label>
-        <input matInput="matInput" (dateChange)="sendDateValue()" [matDatepicker]="picker" placeholder="{{ placeholdername }}" class="{{ className }}" [formControl]="date">
+        <input matInput="matInput" (dateChange)="sendDateValue()" [matDatepicker]="picker" placeholder="{{ placeholdername }}"  [formControl]="date">
             <mat-datepicker-toggle matSuffix="matSuffix" [for]="picker">
                 <mat-icon matDatepickerToggleIcon="matDatepickerToggleIcon">keyboard_arrow_down</mat-icon>
             </mat-datepicker-toggle>

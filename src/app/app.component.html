@@ -1,7 +1,7 @@
 <router-outlet>
   <app-input-text></app-input-text> 
-  <app-datepicker   [label]='label'  [className]="classname" [placeholdername]='placeholdername' [appearance]="appearanceType" (datepickerValue)="acceptData($event)"></app-datepicker>
-  <app-datepicker   [label]='label'  [className]="classname" [placeholdername]='placeholdername' appearance="outline" (datepickerValue)="acceptData($event)"></app-datepicker>
+  <app-datepicker  class="datepickerOne" [label]='label'  className="mydatepicker" [placeholdername]='placeholdername' [appearance]="appearanceType" (datepickerValue)="acceptData($event)"></app-datepicker>
+  <app-datepicker  class="datepickerTwo" [label]='label'  className="mydatepicker"  [placeholdername]='placeholdername' appearance="outline" (datepickerValue)="acceptData($event)"></app-datepicker>
 
   <p>{{ dateParent.value}}</p>
 </router-outlet>
