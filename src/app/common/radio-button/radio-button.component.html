@@ -1,0 +1,9 @@
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="radioValue"  (change)="radioChange($event)">
+  <mat-radio-button class="example-radio-button" *ngFor="let item of radioList" [value]="item">
+    {{item}}
+  </mat-radio-button>
+</mat-radio-group>
+

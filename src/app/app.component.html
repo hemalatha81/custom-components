@@ -1,7 +1,21 @@
 <router-outlet>
   <app-input-text></app-input-text> 
+
+  <h2>Datepicker</h2>
   <app-datepicker  class="datepickerOne" [label]='label'  className="mydatepicker" [placeholdername]='placeholdername' [appearance]="appearanceType" (datepickerValue)="acceptData($event)"></app-datepicker>
   <app-datepicker  class="datepickerTwo" [label]='label'  className="mydatepicker"  [placeholdername]='placeholdername' appearance="outline" (datepickerValue)="acceptData($event)"></app-datepicker>
-
   <p>{{ dateParent.value}}</p>
+
+
+    <h2>Checkbox</h2>
+
+   <app-checkbox [checkboxList]="countries" (sendToParent)="acceptCheckboxValue($event)"></app-checkbox> 
+   <div>selected value is:  {{ checkboxvalue | json }}</div>
+
+
+  <h2>  Radio Button </h2>
+  <label id="example-radio-group-label">Pick your favorite season</label>
+  <app-radio-button [radioList]="season" (sendToParent)="acceptRadioValue($event)"></app-radio-button>
+  <div>Your favorite season is:  {{ radiovalue }}</div>
+
 </router-outlet>

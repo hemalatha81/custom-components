@@ -9,12 +9,16 @@ import { MaterialModule } from './material/material.module';
 import {MatNativeDateModule} from '@angular/material/core';
 import { DatepickerComponent } from './common/datepicker/datepicker.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CheckboxComponent } from './common/checkbox/checkbox.component';
+import { RadioButtonComponent } from './common/radio-button/radio-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputTextComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    CheckboxComponent,
+    RadioButtonComponent
   ],
   imports: [
     BrowserModule,
