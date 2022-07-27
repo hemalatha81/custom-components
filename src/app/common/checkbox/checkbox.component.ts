@@ -21,11 +21,11 @@ export class CheckboxComponent  {
 
   onCheckboxChange(event: any) {
   const selectedValues = (this.form.controls['selectedValues'] as FormArray);
-    if (event.target.checked) {
-      selectedValues.push(new FormControl(event.target.value));
+    if (event.checked) {
+      selectedValues.push(new FormControl(event.source.value));
     } else {
       const index = selectedValues.controls
-      .findIndex(x => x.value === event.target.value);
+      .findIndex(x => x.value === event.source.value);
       selectedValues.removeAt(index);
     }
     this.sendToParent.emit({value:this.form.value})

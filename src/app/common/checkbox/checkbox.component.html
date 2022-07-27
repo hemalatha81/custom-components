@@ -1,6 +1,6 @@
 
 
-  <section>
+  <!-- <section>
     <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
       <div *ngFor="let item of checkboxList; let i=index">
         <input type="checkbox" formArrayName="selectedValues" [value]="item.value" (change)="onCheckboxChange($event)" 
@@ -8,14 +8,14 @@
         {{ item.name}}
       </div>
     </form>
-  </section>
+  </section> -->
   
   <h1>MUI CHECKBOX</h1>
 
   <section>
-    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <form [formGroup]="form" >
       <div *ngFor="let item of checkboxList; let i=index">
-        <mat-checkbox  formArrayName="selectedValues"  (change)="onCheckboxChange($event)">
+        <mat-checkbox  formArrayName="selectedValues" [value]="item.value"  (change)="onCheckboxChange($event)">
         {{ item.name}}
       </mat-checkbox>
       </div>
